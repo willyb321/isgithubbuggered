@@ -1,0 +1,13 @@
+<script>
+function apiStatusMessage(data) {
+	document.write(data.body)
+}
+function apiStatus(data) {
+  console.log(data.status);
+  if (data.status != "good") {
+  	document.write("GITHUB IS BUGGERED! \n")
+  }
+}
+</script>
+<script src="https://status.github.com/api/status.json?callback=apiStatus"></script>
+<script src="https://status.github.com/api/last-message.json?callback=apiStatusMessage"></script>
